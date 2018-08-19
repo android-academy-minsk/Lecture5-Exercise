@@ -1,0 +1,18 @@
+<resources>
+
+    <style name="Exercise" />
+
+    <style name="Exercise.TextView" />
+
+
+    <style name="Exercise.TextView.Movie" />
+
+    <style name="Exercise.TextView.Movie.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+        <item name="android:background">@android:color/black</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+</resources>
