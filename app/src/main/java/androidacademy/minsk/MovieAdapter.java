@@ -36,7 +36,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ImageViewHol
                 .load(movie.getImageUrl())
                 .fit()
                 .centerCrop()
-                .placeholder(R.drawable.loading)
                 .into(holder.imageView);
 
         holder.title.setText(movie.getTitle());
