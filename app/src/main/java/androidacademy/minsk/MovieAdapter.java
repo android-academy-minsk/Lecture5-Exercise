@@ -6,12 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import androidacademy.minsk.domain.Movie;
 import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHolder> {
+public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ImageViewHolder> {
 
     private List<Movie> items = new ArrayList<>();
 
@@ -37,6 +38,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
                 .centerCrop()
                 .placeholder(R.drawable.loading)
                 .into(holder.imageView);
+
+        holder.title.setText(movie.getTitle());
     }
 
     public void replaceWith(List<Movie> items) {
@@ -52,10 +55,13 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     class ImageViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imageView;
+        TextView title;
 
         ImageViewHolder(View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.image);
+
+            imageView = itemView.findViewById(R.id.iv_image);
+            title = itemView.findViewById(R.id.tv_title);
         }
     }
 }

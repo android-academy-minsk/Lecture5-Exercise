@@ -4,8 +4,6 @@ android {
     compileSdkVersion 27
 
     defaultConfig {
-        applicationId "spb.android.academy.networking"
-
         minSdkVersion 19
         targetSdkVersion 27
 

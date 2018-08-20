@@ -18,7 +18,7 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageAdapter adapter;
+    private MovieAdapter adapter;
     private RecyclerView recyclerView;
     private TextView statusText;
     private Button searchBtn;
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new ImageAdapter();
+        adapter = new MovieAdapter();
         recyclerView.setAdapter(adapter);
     }
 

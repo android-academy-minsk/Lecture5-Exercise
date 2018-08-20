@@ -99,7 +99,7 @@ public class NetworkModule {
             public Response intercept(Chain chain) throws IOException {
                 final Request originalRequest = chain.request();
                 final HttpUrl newUrl = originalRequest.url().newBuilder() //
-                        .addQueryParameter("api_key", API_KEY)
+                        .addQueryParameter("apikey", API_KEY)
                         .build();
 
                 final Request newRequest = originalRequest.newBuilder() //
